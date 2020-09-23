@@ -5,9 +5,9 @@ export default function Index({ title, link, orderNumber, amount }) {
   return (
     <Layout title={ title }>
       <form method="POST">
-        <label htmlFor="orderNumber">Order number</label>
+        <label htmlFor="orderNumber">Case Ref</label>
         <input required type="text" name="orderNumber" id="orderNumber" defaultValue={orderNumber} />
-        <label htmlFor="amount">Payment amount</label>
+        <label htmlFor="amount">Payment Amount</label>
         <div className="currency-wrapper">
           <span>£</span>
           <input required type="number" step="0.01" name="amount" id="amount" defaultValue={amount} />
