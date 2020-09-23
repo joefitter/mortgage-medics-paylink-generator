@@ -1,0 +1,93 @@
+@import 'picnic/src/picnic';
+$background-colour: #ECECEC;
+$green: #009B79;
+$grey: #222222;
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: $green;
+
+  #message {
+    padding-left: 0;
+  }
+
+  > header {
+    background-color: $background-colour;
+    margin-bottom: 5em;
+    position: relative;
+    padding: 1em;
+    background-image: url('../images/logo.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    background-origin: content-box;
+
+    img {
+      height: 100%;
+      left: 1em;
+      float: left;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0.25em;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    color: $green;
+    font-weight: 200;
+  }
+
+  input[type=submit] {
+    background-color: $green;
+  }
+
+  p:empty {
+    padding: 0;
+    margin: 0;
+  }
+
+  section.main {
+    max-width: 960px;
+    margin: 0 auto;
+
+    > .card {
+      padding: 3em 2em;
+      background-color: $background-colour;
+    }
+
+    .card {
+      h3.link {
+        word-break: break-word;
+        font-weight: normal;
+      }
+    }
+
+    input {
+      margin-bottom: 1em;
+    }
+
+    .currency-wrapper {
+      position: relative;
+
+      span {
+        position: absolute;
+        background-color: #e9ecef;
+        border: 1px solid #aaa;
+        width: 1.5em;
+        text-align: center;
+        border-top-left-radius: 0.2em;
+        border-bottom-left-radius: 0.2em;
+        height: 2.1em;
+        padding-top: 0.25em;
+        color: #444444;
+      }
+
+      input {
+        padding-left: 35px;
+      }
+    }
+  }
+}
