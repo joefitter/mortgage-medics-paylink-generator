@@ -2,6 +2,19 @@
 $background-colour: #ECECEC;
 $green: #009B79;
 $grey: #222222;
+$screen-sm-max: 768px;
+
+@mixin smallScreen {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin custom($value) {
+  @media (max-width: #{$value}) {
+    @content;
+  }
+}
 
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -22,6 +35,10 @@ body {
     background-size: contain;
     background-origin: content-box;
 
+    @include smallScreen {
+      background-position: center;
+    }
+
     img {
       height: 100%;
       left: 1em;
@@ -32,6 +49,12 @@ body {
       margin: 0;
       padding: 0.25em;
       text-align: center;
+      font-size: 3vw;
+
+      @include smallScreen {
+        font-size: 5vw;
+        visibility: hidden;
+      }
     }
   }
 
@@ -56,9 +79,27 @@ body {
     > .card {
       padding: 3em 2em;
       background-color: $background-colour;
+
+      @include smallScreen {
+        padding-top: 1em;
+      }
+
+      @include custom(960px) {
+        margin: 3em;
+      }
     }
 
     .card {
+      h1.small-screen {
+        display: none;
+        font-size: 4vw;
+        text-align: center;
+
+        @include smallScreen {
+          display: block;
+        }
+      }
+
       h3.link {
         word-break: break-word;
         font-weight: normal;

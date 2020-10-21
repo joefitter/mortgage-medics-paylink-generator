@@ -5,6 +5,7 @@ export default function Index({ title, link, orderNumber, amount }) {
   return (
     <Layout title={ title }>
       <form method="POST">
+        <h1 className="small-screen">{title}</h1>
         <label htmlFor="orderNumber">Case Ref</label>
         <input required type="text" name="orderNumber" id="orderNumber" defaultValue={orderNumber} />
         <label htmlFor="amount">Payment Amount</label>
