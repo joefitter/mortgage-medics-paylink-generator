@@ -6,5 +6,5 @@ module.exports = {
   bitlyAccessToken: process.env.BITLY_TOKEN,
   language: process.env.LANGUAGE || 'en_US',
   currency: process.env.CURRENCY || 'GBP',
-  title: 'Mortgage Medics invoice payment link generator'
+  title: 'Card payment link generator'
 }
