@@ -94,6 +94,7 @@ body {
         display: none;
         font-size: 4vw;
         text-align: center;
+        color: $grey;
 
         @include smallScreen {
           display: block;
